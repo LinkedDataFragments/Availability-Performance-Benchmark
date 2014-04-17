@@ -1,0 +1,442 @@
+Reading Test Driver data...done
+Reading query mix file: queries\explore\querymix.txt
+Reading query ignore file: queries\explore\ignoreQueries.txt
+
+Starting test...
+
+Generating queries...done
+Clients created.
+Thread 4: query mix -50: 0.00ms, total: 235.67ms
+Thread 3: query mix -49: 0.00ms, total: 240.07ms
+Thread 2: query mix -47: 0.00ms, total: 249.22ms
+Thread 1: query mix -48: 0.00ms, total: 255.99ms
+Thread 1: query mix -43: 0.00ms, total: 182.41ms
+Thread 4: query mix -46: 0.00ms, total: 235.96ms
+Thread 2: query mix -44: 0.00ms, total: 224.73ms
+Thread 3: query mix -45: 0.00ms, total: 242.33ms
+Thread 4: query mix -41: 0.00ms, total: 116.39ms
+Thread 1: query mix -42: 0.00ms, total: 150.49ms
+Thread 2: query mix -40: 0.00ms, total: 127.35ms
+Thread 3: query mix -39: 0.00ms, total: 144.12ms
+Thread 1: query mix -37: 0.00ms, total: 135.27ms
+Thread 4: query mix -38: 0.00ms, total: 146.19ms
+Thread 3: query mix -35: 0.00ms, total: 129.20ms
+Thread 2: query mix -36: 0.00ms, total: 165.97ms
+Thread 1: query mix -34: 0.00ms, total: 122.28ms
+Thread 4: query mix -33: 0.00ms, total: 132.72ms
+Thread 3: query mix -32: 0.00ms, total: 119.77ms
+Thread 2: query mix -31: 0.00ms, total: 171.71ms
+Thread 1: query mix -30: 0.00ms, total: 152.63ms
+Thread 4: query mix -29: 0.00ms, total: 159.25ms
+Thread 3: query mix -28: 0.00ms, total: 157.21ms
+Thread 2: query mix -27: 0.00ms, total: 121.36ms
+Thread 1: query mix -26: 0.00ms, total: 147.41ms
+Thread 3: query mix -24: 0.00ms, total: 121.70ms
+Thread 4: query mix -25: 0.00ms, total: 139.74ms
+Thread 2: query mix -23: 0.00ms, total: 142.41ms
+Thread 1: query mix -22: 0.00ms, total: 145.96ms
+Thread 3: query mix -21: 0.00ms, total: 138.77ms
+Thread 4: query mix -20: 0.00ms, total: 150.35ms
+Thread 2: query mix -19: 0.00ms, total: 132.89ms
+Thread 3: query mix -17: 0.00ms, total: 107.35ms
+Thread 1: query mix -18: 0.00ms, total: 118.66ms
+Thread 4: query mix -16: 0.00ms, total: 123.42ms
+Thread 2: query mix -15: 0.00ms, total: 117.12ms
+Thread 3: query mix -14: 0.00ms, total: 112.20ms
+Thread 1: query mix -13: 0.00ms, total: 112.87ms
+Thread 4: query mix -12: 0.00ms, total: 112.69ms
+Thread 2: query mix -11: 0.00ms, total: 105.25ms
+Thread 3: query mix -10: 0.00ms, total: 128.92ms
+Thread 4: query mix -8: 0.00ms, total: 142.39ms
+Thread 1: query mix -9: 0.00ms, total: 175.66ms
+Thread 2: query mix -7: 0.00ms, total: 156.13ms
+Thread 3: query mix -6: 0.00ms, total: 152.14ms
+Thread 4: query mix -5: 0.00ms, total: 125.93ms
+Thread 1: query mix -4: 0.00ms, total: 128.36ms
+Thread 2: query mix -3: 0.00ms, total: 137.82ms
+Thread 3: query mix -2: 0.00ms, total: 151.65ms
+Thread 4: query mix -1: 0.00ms, total: 150.76ms
+Warmup phase ended...
+
+Starting actual run...
+Thread 1: query mix 1: 109.40ms, total: 112.39ms
+Thread 3: query mix 0: 113.40ms, total: 121.18ms
+Thread 2: query mix 3: 114.98ms, total: 117.48ms
+Thread 4: query mix 2: 120.76ms, total: 123.26ms
+Thread 1: query mix 4: 103.56ms, total: 105.92ms
+Thread 3: query mix 5: 104.63ms, total: 107.31ms
+Thread 2: query mix 6: 107.87ms, total: 112.09ms
+Thread 4: query mix 7: 104.47ms, total: 107.31ms
+Thread 2: query mix 10: 96.51ms, total: 99.40ms
+Thread 1: query mix 8: 126.45ms, total: 129.06ms
+Thread 3: query mix 9: 128.77ms, total: 131.90ms
+Thread 4: query mix 11: 123.12ms, total: 125.70ms
+Thread 2: query mix 12: 126.77ms, total: 129.87ms
+Thread 1: query mix 13: 113.13ms, total: 116.40ms
+Thread 4: query mix 15: 104.64ms, total: 107.64ms
+Thread 3: query mix 14: 109.55ms, total: 114.47ms
+Thread 2: query mix 16: 104.65ms, total: 107.28ms
+Thread 4: query mix 18: 100.33ms, total: 103.95ms
+Thread 1: query mix 17: 104.97ms, total: 107.53ms
+Thread 3: query mix 19: 118.59ms, total: 123.06ms
+Thread 4: query mix 21: 117.10ms, total: 119.80ms
+Thread 1: query mix 22: 123.61ms, total: 127.31ms
+Thread 2: query mix 20: 124.80ms, total: 128.67ms
+Thread 3: query mix 23: 104.99ms, total: 108.16ms
+Thread 4: query mix 24: 116.13ms, total: 118.60ms
+Thread 2: query mix 26: 118.49ms, total: 120.75ms
+Thread 3: query mix 27: 114.00ms, total: 116.79ms
+Thread 1: query mix 25: 118.44ms, total: 121.47ms
+Thread 4: query mix 28: 134.42ms, total: 137.98ms
+Thread 3: query mix 30: 134.56ms, total: 140.25ms
+Thread 2: query mix 29: 139.02ms, total: 143.15ms
+Thread 1: query mix 31: 143.67ms, total: 146.48ms
+Thread 3: query mix 33: 106.44ms, total: 111.95ms
+Thread 4: query mix 32: 133.25ms, total: 140.05ms
+Thread 1: query mix 35: 140.21ms, total: 145.34ms
+Thread 2: query mix 34: 139.41ms, total: 156.50ms
+Thread 3: query mix 36: 135.52ms, total: 139.48ms
+Thread 4: query mix 37: 123.41ms, total: 127.04ms
+Thread 1: query mix 38: 125.40ms, total: 129.19ms
+Thread 2: query mix 39: 151.22ms, total: 154.36ms
+Thread 3: query mix 40: 111.32ms, total: 114.50ms
+Thread 4: query mix 41: 127.61ms, total: 130.94ms
+Thread 1: query mix 42: 107.29ms, total: 110.76ms
+Thread 2: query mix 43: 114.28ms, total: 118.34ms
+Thread 3: query mix 44: 119.70ms, total: 123.72ms
+Thread 4: query mix 45: 113.15ms, total: 116.43ms
+Thread 1: query mix 46: 119.66ms, total: 122.78ms
+Thread 2: query mix 47: 112.94ms, total: 117.12ms
+Thread 3: query mix 48: 103.48ms, total: 106.67ms
+Thread 4: query mix 49: 99.18ms, total: 102.14ms
+Thread 1: query mix 50: 127.29ms, total: 130.17ms
+Thread 2: query mix 51: 123.32ms, total: 126.45ms
+Thread 3: query mix 52: 115.69ms, total: 118.99ms
+Thread 4: query mix 53: 118.50ms, total: 121.75ms
+Thread 1: query mix 54: 108.77ms, total: 111.89ms
+Thread 2: query mix 55: 118.92ms, total: 122.58ms
+Thread 3: query mix 56: 126.77ms, total: 130.03ms
+Thread 4: query mix 57: 119.47ms, total: 124.65ms
+Thread 1: query mix 58: 120.79ms, total: 124.77ms
+Thread 2: query mix 59: 105.95ms, total: 109.94ms
+Thread 3: query mix 60: 133.47ms, total: 136.92ms
+Thread 4: query mix 61: 131.08ms, total: 134.93ms
+Thread 1: query mix 62: 141.60ms, total: 145.22ms
+Thread 2: query mix 63: 138.42ms, total: 142.78ms
+Thread 3: query mix 64: 113.68ms, total: 118.54ms
+Thread 4: query mix 65: 135.03ms, total: 138.86ms
+Thread 1: query mix 66: 105.61ms, total: 109.21ms
+Thread 2: query mix 67: 93.82ms, total: 96.98ms
+Thread 3: query mix 68: 130.81ms, total: 133.89ms
+Thread 4: query mix 69: 112.39ms, total: 116.22ms
+Thread 1: query mix 70: 103.63ms, total: 107.25ms
+Thread 2: query mix 71: 109.02ms, total: 112.80ms
+Thread 3: query mix 72: 126.64ms, total: 129.85ms
+Thread 1: query mix 74: 124.69ms, total: 127.49ms
+Thread 4: query mix 73: 131.58ms, total: 139.36ms
+Thread 2: query mix 75: 130.92ms, total: 133.85ms
+Thread 3: query mix 76: 129.47ms, total: 132.90ms
+Thread 1: query mix 77: 134.40ms, total: 138.23ms
+Thread 4: query mix 78: 140.23ms, total: 143.68ms
+Thread 2: query mix 79: 131.64ms, total: 134.91ms
+Thread 3: query mix 80: 109.96ms, total: 112.51ms
+Thread 4: query mix 82: 94.16ms, total: 97.30ms
+Thread 1: query mix 81: 110.33ms, total: 112.99ms
+Thread 2: query mix 83: 98.28ms, total: 100.64ms
+Thread 3: query mix 84: 114.56ms, total: 117.13ms
+Thread 4: query mix 85: 105.32ms, total: 108.07ms
+Thread 2: query mix 87: 105.06ms, total: 108.20ms
+Thread 1: query mix 86: 119.02ms, total: 121.90ms
+Thread 3: query mix 88: 127.21ms, total: 132.07ms
+Thread 4: query mix 89: 132.53ms, total: 135.69ms
+Thread 2: query mix 90: 124.75ms, total: 128.75ms
+Thread 1: query mix 91: 120.16ms, total: 124.24ms
+Thread 4: query mix 93: 112.36ms, total: 115.82ms
+Thread 3: query mix 92: 119.30ms, total: 122.17ms
+Thread 2: query mix 94: 112.41ms, total: 114.97ms
+Thread 1: query mix 95: 119.78ms, total: 122.64ms
+Thread 4: query mix 96: 114.85ms, total: 117.94ms
+Thread 3: query mix 97: 115.69ms, total: 120.25ms
+Thread 1: query mix 99: 111.48ms, total: 114.54ms
+Thread 2: query mix 98: 123.09ms, total: 127.21ms
+Thread 1: query mix 102: 94.76ms, total: 97.37ms
+Thread 4: query mix 100: 109.64ms, total: 112.04ms
+Thread 3: query mix 101: 108.93ms, total: 111.65ms
+Thread 2: query mix 103: 101.67ms, total: 104.44ms
+Thread 4: query mix 105: 108.42ms, total: 111.66ms
+Thread 1: query mix 104: 123.72ms, total: 126.27ms
+Thread 2: query mix 107: 115.36ms, total: 119.43ms
+Thread 3: query mix 106: 123.85ms, total: 126.39ms
+Thread 4: query mix 108: 98.74ms, total: 101.08ms
+Thread 1: query mix 109: 101.17ms, total: 103.93ms
+Thread 2: query mix 110: 108.03ms, total: 110.50ms
+Thread 3: query mix 111: 116.71ms, total: 120.41ms
+Thread 1: query mix 113: 109.03ms, total: 112.11ms
+Thread 4: query mix 112: 121.55ms, total: 124.88ms
+Thread 2: query mix 114: 105.44ms, total: 107.96ms
+Thread 3: query mix 115: 114.88ms, total: 117.48ms
+Thread 1: query mix 116: 130.41ms, total: 134.45ms
+Thread 4: query mix 117: 137.78ms, total: 140.69ms
+Thread 2: query mix 118: 148.48ms, total: 152.45ms
+Thread 3: query mix 119: 149.44ms, total: 152.65ms
+Thread 4: query mix 121: 131.71ms, total: 135.08ms
+Thread 1: query mix 120: 144.82ms, total: 147.72ms
+Thread 2: query mix 122: 132.95ms, total: 136.54ms
+Thread 3: query mix 123: 134.38ms, total: 137.07ms
+Thread 1: query mix 125: 130.70ms, total: 133.56ms
+Thread 4: query mix 124: 141.57ms, total: 145.19ms
+Thread 2: query mix 126: 129.13ms, total: 131.81ms
+Thread 3: query mix 127: 116.78ms, total: 119.16ms
+Thread 4: query mix 129: 118.20ms, total: 120.88ms
+Thread 3: query mix 131: 133.33ms, total: 136.80ms
+Thread 1: query mix 128: 173.65ms, total: 177.16ms
+Thread 2: query mix 130: 162.81ms, total: 169.90ms
+Thread 4: query mix 132: 122.66ms, total: 125.57ms
+Thread 3: query mix 133: 123.16ms, total: 125.80ms
+Thread 2: query mix 135: 125.47ms, total: 128.10ms
+Thread 1: query mix 134: 140.73ms, total: 143.83ms
+Thread 4: query mix 136: 116.66ms, total: 120.54ms
+Thread 3: query mix 137: 111.25ms, total: 114.55ms
+Thread 2: query mix 138: 121.31ms, total: 124.37ms
+Thread 1: query mix 139: 124.25ms, total: 127.44ms
+Thread 4: query mix 140: 136.50ms, total: 143.20ms
+Thread 3: query mix 141: 137.24ms, total: 144.73ms
+Thread 2: query mix 142: 154.38ms, total: 158.63ms
+Thread 1: query mix 143: 155.29ms, total: 157.94ms
+Thread 4: query mix 144: 136.78ms, total: 139.86ms
+Thread 3: query mix 145: 107.15ms, total: 110.64ms
+Thread 2: query mix 146: 110.49ms, total: 120.45ms
+Thread 1: query mix 147: 142.31ms, total: 145.58ms
+Thread 3: query mix 149: 130.36ms, total: 133.09ms
+Thread 4: query mix 148: 138.71ms, total: 143.43ms
+Thread 2: query mix 150: 134.29ms, total: 136.86ms
+Thread 1: query mix 151: 123.10ms, total: 125.93ms
+Thread 3: query mix 152: 131.08ms, total: 133.73ms
+Thread 4: query mix 153: 127.79ms, total: 131.11ms
+Thread 2: query mix 154: 124.04ms, total: 126.39ms
+Thread 1: query mix 155: 112.38ms, total: 115.90ms
+Thread 4: query mix 157: 103.49ms, total: 106.01ms
+Thread 3: query mix 156: 117.82ms, total: 120.89ms
+Thread 2: query mix 158: 117.27ms, total: 121.67ms
+Thread 1: query mix 159: 108.90ms, total: 111.55ms
+Thread 4: query mix 160: 108.47ms, total: 111.54ms
+Thread 3: query mix 161: 107.07ms, total: 109.67ms
+Thread 2: query mix 162: 102.86ms, total: 105.50ms
+Thread 1: query mix 163: 103.50ms, total: 105.98ms
+Thread 4: query mix 164: 106.46ms, total: 109.77ms
+Thread 3: query mix 165: 112.50ms, total: 115.97ms
+Thread 2: query mix 166: 124.82ms, total: 128.36ms
+Thread 1: query mix 167: 131.05ms, total: 134.97ms
+Thread 3: query mix 169: 137.55ms, total: 142.01ms
+Thread 4: query mix 168: 160.12ms, total: 164.92ms
+Thread 2: query mix 170: 155.85ms, total: 162.92ms
+Thread 1: query mix 171: 149.30ms, total: 154.42ms
+Thread 3: query mix 172: 126.02ms, total: 131.20ms
+Thread 4: query mix 173: 131.36ms, total: 135.67ms
+Thread 2: query mix 174: 114.52ms, total: 117.24ms
+Thread 1: query mix 175: 114.58ms, total: 117.63ms
+Thread 3: query mix 176: 129.05ms, total: 131.54ms
+Thread 4: query mix 177: 137.92ms, total: 141.17ms
+Thread 2: query mix 178: 132.77ms, total: 135.68ms
+Thread 1: query mix 179: 136.28ms, total: 141.74ms
+Thread 3: query mix 180: 134.69ms, total: 137.96ms
+Thread 4: query mix 181: 133.46ms, total: 137.38ms
+Thread 2: query mix 182: 115.54ms, total: 118.84ms
+Thread 1: query mix 183: 104.11ms, total: 107.86ms
+Thread 3: query mix 184: 137.40ms, total: 141.44ms
+Thread 4: query mix 185: 132.64ms, total: 136.16ms
+Thread 2: query mix 186: 121.94ms, total: 125.29ms
+Thread 1: query mix 187: 138.43ms, total: 141.78ms
+Thread 3: query mix 188: 111.69ms, total: 115.90ms
+Thread 4: query mix 189: 116.38ms, total: 120.19ms
+Thread 2: query mix 190: 107.76ms, total: 114.30ms
+Thread 1: query mix 191: 134.36ms, total: 137.64ms
+Thread 3: query mix 192: 130.49ms, total: 134.12ms
+Thread 2: query mix 194: 119.61ms, total: 122.14ms
+Thread 4: query mix 193: 138.13ms, total: 141.32ms
+Thread 1: query mix 195: 118.46ms, total: 120.92ms
+Thread 3: query mix 196: 127.76ms, total: 130.68ms
+Thread 2: query mix 197: 133.18ms, total: 137.14ms
+Thread 4: query mix 198: 124.56ms, total: 129.55ms
+Thread 1: query mix 199: 117.17ms, total: 121.12ms
+Thread 3: query mix 200: 122.75ms, total: 126.39ms
+Thread 2: query mix 201: 105.61ms, total: 108.53ms
+Thread 4: query mix 202: 133.75ms, total: 137.65ms
+Thread 1: query mix 203: 115.98ms, total: 118.81ms
+Thread 3: query mix 204: 145.68ms, total: 149.27ms
+Thread 2: query mix 205: 143.29ms, total: 146.93ms
+Thread 4: query mix 206: 126.49ms, total: 130.20ms
+Thread 1: query mix 207: 126.02ms, total: 129.77ms
+Thread 3: query mix 208: 110.94ms, total: 116.34ms
+Thread 2: query mix 209: 113.46ms, total: 119.59ms
+Thread 4: query mix 210: 128.11ms, total: 133.41ms
+Thread 1: query mix 211: 133.87ms, total: 138.26ms
+Thread 3: query mix 212: 114.76ms, total: 117.86ms
+Thread 2: query mix 213: 113.16ms, total: 116.56ms
+Thread 4: query mix 214: 99.97ms, total: 102.85ms
+Thread 1: query mix 215: 123.75ms, total: 128.20ms
+Thread 3: query mix 216: 120.44ms, total: 124.14ms
+Thread 2: query mix 217: 131.07ms, total: 134.27ms
+Thread 4: query mix 218: 123.40ms, total: 127.92ms
+Thread 1: query mix 219: 127.97ms, total: 131.62ms
+Thread 3: query mix 220: 113.68ms, total: 117.28ms
+Thread 2: query mix 221: 131.96ms, total: 136.41ms
+Thread 4: query mix 222: 126.13ms, total: 130.50ms
+Thread 1: query mix 223: 115.57ms, total: 118.81ms
+Thread 3: query mix 224: 127.43ms, total: 130.30ms
+Thread 4: query mix 226: 110.98ms, total: 114.25ms
+Thread 2: query mix 225: 129.54ms, total: 139.29ms
+Thread 1: query mix 227: 129.46ms, total: 134.02ms
+Thread 3: query mix 228: 107.47ms, total: 110.53ms
+Thread 4: query mix 229: 118.67ms, total: 121.43ms
+Thread 2: query mix 230: 125.69ms, total: 128.47ms
+Thread 1: query mix 231: 160.82ms, total: 164.41ms
+Thread 3: query mix 232: 127.49ms, total: 130.42ms
+Thread 4: query mix 233: 140.32ms, total: 143.79ms
+Thread 2: query mix 234: 155.57ms, total: 160.97ms
+Thread 1: query mix 235: 109.17ms, total: 111.98ms
+Thread 3: query mix 236: 116.12ms, total: 120.06ms
+Thread 4: query mix 237: 102.08ms, total: 104.72ms
+Thread 2: query mix 238: 106.99ms, total: 109.82ms
+Thread 1: query mix 239: 119.29ms, total: 121.98ms
+Thread 3: query mix 240: 121.16ms, total: 124.43ms
+Thread 4: query mix 241: 112.20ms, total: 115.11ms
+Thread 2: query mix 242: 112.29ms, total: 114.80ms
+Thread 1: query mix 243: 94.95ms, total: 97.36ms
+Thread 3: query mix 244: 100.12ms, total: 102.96ms
+Thread 4: query mix 245: 105.36ms, total: 107.77ms
+Thread 1: query mix 247: 112.40ms, total: 115.59ms
+Thread 2: query mix 246: 122.22ms, total: 125.22ms
+Thread 3: query mix 248: 120.40ms, total: 124.32ms
+Thread 4: query mix 249: 134.77ms, total: 138.12ms
+Thread 1: query mix 250: 124.80ms, total: 128.45ms
+Thread 2: query mix 251: 120.99ms, total: 124.78ms
+Thread 3: query mix 252: 118.54ms, total: 123.16ms
+Thread 4: query mix 253: 108.99ms, total: 113.32ms
+Thread 1: query mix 254: 107.04ms, total: 110.72ms
+Thread 2: query mix 255: 109.50ms, total: 112.71ms
+Benchmark run completed in 8.101539737s
+
+Scale factor:           1000
+Number of warmup runs:  50
+Number of clients:      4
+Seed:                   808080
+Number of query mix runs (without warmups): 256 times
+min/max Querymix runtime: 0.0938s / 0.1736s
+Total runtime (sum):    31.176 seconds
+Total actual runtime:   8.102 seconds
+QMpH:                   113756.15 query mixes per hour
+CQET:                   0.12178 seconds average runtime of query mix
+CQET (geom.):           0.12100 seconds geometric mean runtime of query mix
+
+Metrics for Query:      1
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result count:   0.00
+min/max result count:   2147483647 / -2147483648
+Number of timeouts:     0
+
+Metrics for Query:      2
+Count:                  1536 times executed in whole run
+AQET:                   0.020297 seconds (arithmetic mean)
+AQET(geom.):            0.019571 seconds (geometric mean)
+QPS:                    189.59 Queries per second
+minQET/maxQET:          0.00870240s / 0.04791796s
+Average result count:   19.53
+min/max result count:   6 / 37
+Number of timeouts:     0
+
+Metrics for Query:      3
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result count:   0.00
+min/max result count:   2147483647 / -2147483648
+Number of timeouts:     0
+
+Metrics for Query:      4
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result count:   0.00
+min/max result count:   2147483647 / -2147483648
+Number of timeouts:     0
+
+Metrics for Query:      5
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result count:   0.00
+min/max result count:   2147483647 / -2147483648
+Number of timeouts:     0
+
+Metrics for Query:      7
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result count:   0.00
+min/max result count:   2147483647 / -2147483648
+Number of timeouts:     0
+
+Metrics for Query:      8
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result count:   0.00
+min/max result count:   2147483647 / -2147483648
+Number of timeouts:     0
+
+Metrics for Query:      9
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result (Bytes): 0.00
+min/max result (Bytes): 2147483647 / -2147483648
+Number of timeouts:     0
+
+Metrics for Query:      10
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result count:   0.00
+min/max result count:   2147483647 / -2147483648
+Number of timeouts:     0
+
+Metrics for Query:      11
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result count:   0.00
+min/max result count:   2147483647 / -2147483648
+Number of timeouts:     0
+
+Metrics for Query:      12
+Count:                  0 times executed in whole run
+AQET:                   0.000000 seconds (arithmetic mean)
+AQET(geom.):            NaN seconds (geometric mean)
+QPS:                    Infinity Queries per second
+minQET/maxQET:          179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00000000s / 0.00000000s
+Average result (Bytes): 0.00
+min/max result (Bytes): 2147483647 / -2147483648
+Number of timeouts:     0
+
+
