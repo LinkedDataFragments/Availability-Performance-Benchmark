@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# unmount mounted drives
+echo '=== unmounting drives ==='
+sudo umount /mnt
+
 # format local instance drives to ext4
 echo
 echo '=== formatting drives ==='
