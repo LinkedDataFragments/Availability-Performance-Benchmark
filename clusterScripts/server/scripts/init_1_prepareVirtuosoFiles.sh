@@ -1,10 +1,13 @@
 #/bin/bash
 
 # prepares datafiles to be loaded into virtuoso
+echo 'Retrieving dataset file from S3...'
+s3cmd get s3://ldf/dataset/bsbm/100M/dataset.nt.xz /mnt/drive2 &&\
 mkdir -p /mnt/drive1/dataset/bsbm/100M &&\
 cd /mnt/drive1/dataset/bsbm/100M &&\
 echo 'Splitting dataset into smaller parts...' &&\
-xzcat /mnt/s3/dataset/bsbm/100M/dataset.nt.xz | split -l 2000000 --additional-suffix=.nt - dataset_ &&\
+xzcat /mnt/drive2/dataset.nt.xz | split -l 2000000 --additional-suffix=.nt - dataset_ &&\
+rm /mnt/drive2/dataset.nt.xz &&\
 echo 'gzipping parts...' &&\
 pigz -v -9 dataset* &&\
 echo 'Done!'
