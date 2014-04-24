@@ -33,6 +33,7 @@ This setup describes how to set up the server for LDF evaluation. We use Amazon 
 We compiled OpenLink Virtuoso Open-Source edition from source, from the development branch. The release version 7.1.0 didn't compile at the time of testing. We followed [these instructions](http://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSUbuntuNotes#Building%20Virtuoso%20from%20Source).
 
 ###Build tweaks
+
 We chose to build Virtuoso in the home directory of the regular user (in this case 'ubuntu'). This allows virtuoso to run as a regular user. LDAP support and imsg support were disabled and no VAD's were installed. We enabled POSIX threads. This resulted in the following commands:
 
 	./configure --prefix=/home/ubuntu/progs/virtuoso-opensource-bin --disable-all-vads --with-pthreads --disable-openldap --disable-imsg
@@ -42,6 +43,7 @@ We chose to build Virtuoso in the home directory of the regular user (in this ca
 This results the Virtuoso package (binaries, libraries, config) being install into the <pre>/home/ubuntu/progs/virtuoso-opensource-bin</pre> directory.
 
 ###Virtuoso server tweaks
+
 The Virtuoso server configuration is kept in a file <pre>virtuoso.ini</pre>. In our setup, this file can be found in <pre>~/progs/virtuoso-opensource-bin/var/lib/virtuoso/db/virtuoso.ini</pre>. We list the changes we made to this file, but don't copy it just like that; read the documentation!
 
 	;
@@ -77,6 +79,7 @@ The Virtuoso server configuration is kept in a file <pre>virtuoso.ini</pre>. In 
 Note that, since striping is used, the DatabaseFile parameter doesn't matter.
 
 ###Running the server
+
 This command is an example on how to start the server. <pre>virtuoso-t -h</pre> gives all options.
 
 	/home/ubuntu/progs/virtuoso-opensource-bin/bin/virtuoso-t -f -c /home/ubuntu/progs/virtuoso-opensource-bin/var/lib/virtuoso/db/virtuoso.ini
