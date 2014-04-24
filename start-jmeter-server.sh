@@ -5,7 +5,7 @@ jmProcess=$(ps -ef | grep jmeter | grep java | grep server | tr -s ' ' | cut -d 
 if [ -z "$jmProcess" ]
 then
 	echo 'starting JMeter server...'
-	~/evaluation/apache-jmeter-2.11/bin/jmeter-server &
+	~/evaluation/apache-jmeter-2.11/bin/jmeter-server > /tmp/jmeter-server.log 2>&1 &
 	disown -a
 else
 	echo "JMeter server already started with PID $jmProcess !"
