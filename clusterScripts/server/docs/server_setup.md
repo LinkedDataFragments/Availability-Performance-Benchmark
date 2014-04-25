@@ -54,11 +54,19 @@ Note the last two lines are the freshly mounted drives.
 
 ### Preparing Virtuoso database files
 
-If you want to run Virtuoso with our pre-loaded database, run:
+If you plan to run Virtuoso with our pre-loaded database, run:
 
 	./2_prepareVirtuosoFiles.sh
 
-This script gets the compressed database files (<code>virtuoso_drive1.tar.xz</code> and <code>virtuoso_drive2.tar.xz</code>) from S3 storage and unpacks them in <code>/mnt/drive1/virtuoso</code> and <code>/mnt/drive2/virtuoso</code> respectively. This can take a few minutes. Also, do this before starting the Virtuoso server (of course).
+This script gets the compressed database files (<code>virtuoso_drive1.tar.xz</code> and <code>virtuoso_drive2.tar.xz</code>) from S3 storage and unpacks them in <code>/mnt/drive1/virtuoso</code> and <code>/mnt/drive2/virtuoso</code> respectively. This can take a few minutes since each file is about 15 GB. Also, do this before starting the Virtuoso server (of course).
+
+### Preparing Fuseki database files
+
+If you plan to run Fuseki with our pre-loaded database, run:
+
+	3_prepareFusekiFiles_<dataset>.sh
+
+This script gets the compressed database files (<code>fuseki-bsbm.tar.xz</code> or <code>fuseki-sp2b.tar.xz</code>) from S3 storage and unpacks them in <code>/mnt/drive2/dataset/bsbm/100M/fuseki-bsbm</code> or <code>/mnt/drive1/dataset/sp2b/100M/fuseki-sp2b</code> respectively. Do this before starting Fuseki (of course).
 
 
 3) Virtuoso setup, config & run
@@ -113,8 +121,31 @@ The Virtuoso server configuration is kept in a file <code>virtuoso.ini</code>. I
 Note that, since striping is used, the DatabaseFile parameter doesn't matter.
 
 ### Running the server
+If you use our AWS server image, just <code>cd</code> to the <code>~/progs/virtuoso-opensource-bin/bin/</code> and run
 
-This command is an example on how to start the server. <code>virtuoso-t -h</code> gives all options.
+	startVirtuoso.sh
+
+This starts Virtuoso as foreground process. In fact, it does this:
 
 	/home/ubuntu/progs/virtuoso-opensource-bin/bin/virtuoso-t -f -c /home/ubuntu/progs/virtuoso-opensource-bin/var/lib/virtuoso/db/virtuoso.ini
+
+And creates a SPARQL endpoint at:
+
+	http://<host>:8890/sparql
+
+
+4) Fuseki setup, config & run
+-----------------------------
+
+We used Fuseki 1.0.1. Everything works pretty well out of the box. We just created scripts to start the server with the right parameters.
+
+### Running the server
+To run the server, <code>cd</code> to <code>~/progs/jena-fuseki-1.0.1</code>, and run
+
+	./fuseki-server-<dataset>.sh
+
+This starts a SPARQL endpoint at
+
+	http://<host>:3030/<dataset>/sparql
+
 
