@@ -35,7 +35,7 @@ This section assumes you use our server image on AWS.
 Scripts for preparing the server are found in the <code>scripts</code> directory. So <code>cd</code> to <code>scripts/</code>. Each script contains some comments that explain what is going on.
 
 ### Mounting the drives
-<code>./1_prepareAndMountDrives.sh</code>.
+	./1_prepareAndMountDrives.sh
 
 This mounts the two instance ssd drives to <code>/mnt/drive1</code> and <code>/mnt/drive2</code>, and formats them. You can check with <code>df -h</code>, and this should give something like:
 
@@ -56,7 +56,7 @@ Note the last two lines are the freshly mounted drives.
 
 If you want to run Virtuoso with our pre-loaded database, run:
 
-<code>./2_prepareVirtuosoFiles.sh</code>
+	./2_prepareVirtuosoFiles.sh
 
 This script gets the compressed database files (<code>virtuoso_drive1.tar.xz</code> and <code>virtuoso_drive2.tar.xz</code>) from S3 storage and unpacks them in <code>/mnt/drive1/virtuoso</code> and <code>/mnt/drive2/virtuoso</code> respectively. This can take a few minutes. Also, do this before starting the Virtuoso server (of course).
 
