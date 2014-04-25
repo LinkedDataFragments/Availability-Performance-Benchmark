@@ -12,12 +12,12 @@ This setup describes how to set up the server for LDF evaluation. We use Amazon 
 * 8 GB RAM
 * Decent network connection
 
-### network
+### Network
 * Put the machine in the same subnet as the clients. In AWS, this can be accomplished by using a Virtual Private Cloud (VPC).
 * Open at least ports 22 (SSH), 4444 (telnet used by monitor) open for incoming traffic within the subnet.
 * Open at least port 8890 (standard Virtuoso sparql endpoint), ... (Fuseki sparql endpoint), ... open for outgoing traffic within the subnet.
 
-### software
+### Software
 * Ubuntu 13.10 (Server edition)
 * ssh (client and server)
 * s3cmd (if in AWS infrastructure): communication with S3 store
@@ -26,8 +26,42 @@ This setup describes how to set up the server for LDF evaluation. We use Amazon 
 * Virtuoso >= 7.1 (we compiled it from source)
 * Tomcat
 * Fuseki
+* Bigdata (the triple store)
 
-2) Virtuoso setup, config & run
+2) Preparing the server (after every (re)boot on AWS)
+-----------------------------------------------------
+This section assumes you use our server image on AWS.
+
+Scripts for preparing the server are found in the <code>scripts</code> directory. So <code>cd</code> to <code>scripts/</code>. Each script contains some comments that explain what is going on.
+
+### Mounting the drives
+<code>./1_prepareAndMountDrives.sh</code>.
+
+This mounts the two instance ssd drives to <code>/mnt/drive1</code> and <code>/mnt/drive2</code>, and formats them. You can check with <code>df -h</code>, and this should give something like:
+
+	Filesystem      Size  Used Avail Use% Mounted on
+	/dev/xvda1      7.8G  2.8G  4.7G  37% /
+	none            4.0K     0  4.0K   0% /sys/fs/cgroup
+	udev            3.7G  8.0K  3.7G   1% /dev
+	tmpfs           752M  196K  752M   1% /run
+	none            5.0M     0  5.0M   0% /run/lock
+	none            3.7G     0  3.7G   0% /run/shm
+	none            100M     0  100M   0% /run/user
+	/dev/xvdb        40G   50M   39G   1% /mnt/drive1
+	/dev/xvdc        40G   50M   39G   1% /mnt/drive2
+
+Note the last two lines are the freshly mounted drives.
+
+### Preparing Virtuoso database files
+
+If you want to run Virtuoso with our pre-loaded database, run:
+
+<code>./2_prepareVirtuosoFiles.sh</code>
+
+This script gets the compressed database files (<code>virtuoso_drive1.tar.xz</code> and <code>virtuoso_drive2.tar.xz</code>) from S3 storage and unpacks them in <code>/mnt/drive1/virtuoso</code> and <code>/mnt/drive2/virtuoso</code> respectively. This can take a few minutes. Also, do this before starting the Virtuoso server (of course).
+
+
+3) Virtuoso setup, config & run
 -------------------------------
 
 We compiled OpenLink Virtuoso Open-Source edition from source, from the development branch. The release version 7.1.0 didn't compile at the time of testing. We followed [these instructions](http://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSUbuntuNotes#Building%20Virtuoso%20from%20Source).
@@ -40,11 +74,11 @@ We chose to build Virtuoso in the home directory of the regular user (in this ca
 	make -j5
 	make install
 
-This results the Virtuoso package (binaries, libraries, config) being install into the <pre>/home/ubuntu/progs/virtuoso-opensource-bin</pre> directory.
+This results the Virtuoso package (binaries, libraries, config) being install into the <code>/home/ubuntu/progs/virtuoso-opensource-bin</code> directory.
 
 ### Virtuoso server tweaks
 
-The Virtuoso server configuration is kept in a file <pre>virtuoso.ini</pre>. In our setup, this file can be found in <pre>~/progs/virtuoso-opensource-bin/var/lib/virtuoso/db/virtuoso.ini</pre>. We list the changes we made to this file, but don't copy it just like that; read the documentation!
+The Virtuoso server configuration is kept in a file <code>virtuoso.ini</code>. In our setup, this file can be found in <code>~/progs/virtuoso-opensource-bin/var/lib/virtuoso/db/virtuoso.ini</code>. We list the changes we made to this file, but don't copy it just like that; read the documentation!
 
 	;
 	;  Database setup
@@ -80,7 +114,7 @@ Note that, since striping is used, the DatabaseFile parameter doesn't matter.
 
 ### Running the server
 
-This command is an example on how to start the server. <pre>virtuoso-t -h</pre> gives all options.
+This command is an example on how to start the server. <code>virtuoso-t -h</code> gives all options.
 
 	/home/ubuntu/progs/virtuoso-opensource-bin/bin/virtuoso-t -f -c /home/ubuntu/progs/virtuoso-opensource-bin/var/lib/virtuoso/db/virtuoso.ini
 
