@@ -64,7 +64,7 @@ This script gets the compressed database files (<code>virtuoso_drive1.tar.xz</co
 
 If you plan to run Fuseki with our pre-loaded database, run:
 
-	3_prepareFusekiFiles_<dataset>.sh
+	./3_prepareFusekiFiles_<dataset>.sh
 
 This script gets the compressed database files (<code>fuseki-bsbm.tar.xz</code> or <code>fuseki-sp2b.tar.xz</code>) from S3 storage and unpacks them in <code>/mnt/drive2/dataset/bsbm/100M/fuseki-bsbm</code> or <code>/mnt/drive1/dataset/sp2b/100M/fuseki-sp2b</code> respectively. Do this before starting Fuseki (of course).
 
@@ -123,7 +123,7 @@ Note that, since striping is used, the DatabaseFile parameter doesn't matter.
 ### Running the server
 If you use our AWS server image, just <code>cd</code> to the <code>~/progs/virtuoso-opensource-bin/bin/</code> and run
 
-	startVirtuoso.sh
+	./startVirtuoso.sh
 
 This starts Virtuoso as foreground process. In fact, it does this:
 
