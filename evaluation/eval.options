@@ -1,0 +1,5 @@
+{
+"outputfolder":"../output/",
+"tester":"virtuoso",
+"metrics":"cpu--memory:used--disks:readbytes--disks:writebytes--network:bytessent--network:bytesrecv"
+}
