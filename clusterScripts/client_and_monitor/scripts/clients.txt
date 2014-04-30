@@ -1,1 +1,1 @@
-ubuntu@ec2-54-86-96-244.compute-1.amazonaws.com
+10.0.0.228
