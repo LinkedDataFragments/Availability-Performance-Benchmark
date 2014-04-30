@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo 'Deleting previous virtuoso files'
+rm -rf /mnt/drive1/virtuoso
+rm -rf /mnt/drive2/virtuoso
+
 echo 'Extracting virtuoso db files from S3. This can take a while...'
 
 # extract Virtuoso data files to instance drive 1

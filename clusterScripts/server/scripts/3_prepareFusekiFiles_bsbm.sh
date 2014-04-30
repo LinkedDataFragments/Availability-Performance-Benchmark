@@ -1,5 +1,9 @@
 #/bin/bash
 
+echo 'Deleting previous fuseki files'
+rm -rf /mnt/drive1/dataset/*
+rm -rf /mnt/drive2/dataset/*
+
 # prepares datafiles for fuseki
 echo 'Extracting fuseki data...'
 mkdir -p /mnt/drive2/dataset/bsbm/100M &&\
