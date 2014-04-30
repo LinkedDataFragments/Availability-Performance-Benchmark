@@ -10,5 +10,5 @@ for x in range (1, total+1):
         text += str(x) + "\n"
 
 #text containts all queries that shouldn't be processed
-with open(myFile, 'w') as w:
+with open(myFile, 'w+') as w:
     w.write(text)
