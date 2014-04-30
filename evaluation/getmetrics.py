@@ -2,16 +2,21 @@ import telnetlib
 import time
 import sys
 import os.path
-import threading        
+import json
 
-output = './' + sys.argv[1]
-metric = sys.argv[2].replace('--', '\t')
-host = sys.argv[3]
+with open('./eval.options') as content_file:
+    content = content_file.read()
+
+options = json.loads(content)
+
+output = sys.argv[1]
+metric = options['metrics'].encode("ascii").replace('--', '\t')
+host = sys.argv[2].encode("ascii")
 
 if os.path.isfile(output + ".stop"):
     os.remove(output + ".stop")
 
-with open(output, "w") as myfile:
+with open(output, "w+") as myfile:
     myfile.write('timestamp\t' + metric + '\n')
     
 print 'started'

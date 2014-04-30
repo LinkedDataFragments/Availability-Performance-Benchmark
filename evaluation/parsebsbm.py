@@ -2,7 +2,7 @@ import sys
 from glob import glob
 import re
 
-files = glob('output/out_*')
+files = glob(sys.argv[1])
 
 for path in files:
 
@@ -36,7 +36,7 @@ Number of timeouts:     0'
                     
             
 
-    with open(outpath, 'w') as outf:
+    with open(outpath, 'w+') as outf:
         outf.write('\t'.join(allValues) + '\n')
 
     with open(outpath, 'a') as outf:
