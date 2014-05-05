@@ -1,0 +1,37 @@
+{
+  "name": "ldf-client",
+  "description": "Linked Data Fragments Client",
+  "version": "0.2.2",
+  "license": "MIT",
+  "main": "ldf-client.js",
+  "bin": {
+    "ldf-client": "./bin/ldf-client"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "browser": "./node_modules/browserify/bin/cmd.js -r ./ldf-client:ldf-client -r n3 > browser/scripts/ldf-client.js",
+    "hint": "./node_modules/jshint/bin/jshint lib test"
+  },
+  "dependencies": {
+    "jsdom": "0.8.8",
+    "request": "2.27.x",
+    "n3": ">=0.1.7",
+    "sparql-parser": "~0.1.4",
+    "uritemplate": "0.3.x",
+    "lodash": "~2.4.1",
+    "lru-cache": "~2.5.0",
+    "setimmediate": "~1.0.1"
+  },
+  "devDependencies": {
+    "jshint": ">=2.1.10",
+    "browserify": ">=3.32.0",
+    "mocha": ">=1.17.1",
+    "sinon": "~1.9.0",
+    "chai": "~1.9.0",
+    "sinon-chai": "~2.5.0"
+  },
+  "browser": {
+    "request": "./browser/lib/request.js",
+    "zlib": false
+  }
+}

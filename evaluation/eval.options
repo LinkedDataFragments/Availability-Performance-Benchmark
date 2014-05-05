@@ -1,5 +1,5 @@
 {
 "outputfolder":"../output/",
 "tester":"virtuoso",
-"metrics":"cpu--memory:used--disks:readbytes--disks:writebytes--network:bytessent--network:bytesrecv"
+"metrics":"cpu:core=0--cpu:core=1--cpu:core=2--cpu:core=3--cpu:iowait--memory:used--memory:actualused--disks:readbytes--disks:writebytes--network:bytessent--network:bytesrecv--network:speed"
 }
