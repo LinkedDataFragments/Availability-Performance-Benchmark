@@ -125,7 +125,7 @@
               </elementProp>
               <elementProp name="" elementType="Argument">
                 <stringProp name="Argument.name"></stringProp>
-                <stringProp name="Argument.value">32</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="" elementType="Argument">
@@ -135,7 +135,7 @@
               </elementProp>
               <elementProp name="" elementType="Argument">
                 <stringProp name="Argument.name"></stringProp>
-                <stringProp name="Argument.value">32</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="" elementType="Argument">
@@ -179,7 +179,7 @@
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="SystemSampler.directory">${HERE}bsbmtools-0.2/</stringProp>
-          <stringProp name="SystemSampler.stdout">${OUTPUT}out_${__threadNum}.txt</stringProp>
+          <stringProp name="SystemSampler.stdout">${OUTPUT}out_${__threadNum}_${__Random(0,808080)}.txt</stringProp>
           <stringProp name="SystemSampler.stderr">${OUTPUT}out_${__threadNum}_err.txt</stringProp>
         </SystemSampler>
         <hashTree/>
