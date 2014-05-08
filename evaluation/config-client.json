@@ -1,5 +1,5 @@
 {
-  "datasource": "http://ec2-54-86-22-42.compute-1.amazonaws.com/bsbm",
+  "datasource": "http://ec2-54-84-68-248.compute-1.amazonaws.com/bsbm",
 
   "prefixes": {
     "rdf":         "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
