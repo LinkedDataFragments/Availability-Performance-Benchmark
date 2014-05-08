@@ -26,7 +26,7 @@ for root, dirnames, filenames in os.walk(rootdir):
           if(line == ''):
               continue
           this_timestamp = int(float(line[0:line.find('\t')])) #get current timestamp
-          if(this_timestamp > current_timestamp+10):
+          if(this_timestamp > current_timestamp+500):
             current_finished = False
             current_line = ''
           if(current_finished == True):
@@ -36,15 +36,17 @@ for root, dirnames, filenames in os.walk(rootdir):
             current_line = line
           else:
             if(current_line != ''): # busy with incomplete
-              line = line[line.index('\t'):]
-              countIndex = line.find('\t')+1
-              if(current_line.count('\t') + line[countIndex:].count('\t') == metricscount):
-                line = current_line + line[countIndex:]
+              if current_line[current_line.find('\t'):] in line:
                 newLines += line + '\n'
-              else :
-                line = current_line + '\t' + line[countIndex:]
-                newLines += line + '\n'
-                current_line = ''
+              else:
+                line = line[line.index('\t'):]
+                countIndex = line.find('\t')+1
+                if(current_line.count('\t') + line[countIndex:].count('\t') == metricscount):
+                  line = current_line + line[countIndex:]
+                  newLines += line + '\n'
+                else :
+                  line = current_line + '\t' + line[countIndex:]
+                  newLines += line + '\n'
             else:
               newLines += line + '\n'
             current_finished = True
