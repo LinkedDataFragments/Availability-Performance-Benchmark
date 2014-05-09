@@ -53,4 +53,7 @@ for root, dirnames, filenames in os.walk(rootdir):
           current_timestamp = this_timestamp
 
       with open(path + '.parsed', 'w+') as newfile:
-          newfile.write(newLines)
+        lines = newLines.split('\n')
+        for line in lines:
+          if(line.count('\t') == metricscount):
+            newfile.write(line + '\n')
