@@ -24,9 +24,8 @@ This setup describes how to set up the server for LDF evaluation. We use Amazon 
 * Java >= 1.7.0 update 51
 * nodejs >= 0.10.15
 * Virtuoso >= 7.1 (we compiled it from source)
-* Tomcat
+* Tomcat 7
 * Fuseki
-* Bigdata (the triple store)
 
 2) Preparing the server (after every (re)boot on AWS)
 -----------------------------------------------------
@@ -74,6 +73,8 @@ This script gets the compressed database files (<code>fuseki-bsbm.tar.xz</code> 
 
 We compiled OpenLink Virtuoso Open-Source edition from source, from the development branch. The release version 7.1.0 didn't compile at the time of testing. We followed [these instructions](http://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSUbuntuNotes#Building%20Virtuoso%20from%20Source).
 
+We did the same for Virtuoso 6.
+
 ### Build tweaks
 
 We chose to build Virtuoso in the home directory of the regular user (in this case 'ubuntu'). This allows virtuoso to run as a regular user. LDAP support and imsg support were disabled and no VAD's were installed. We enabled POSIX threads. This resulted in the following commands:
@@ -109,11 +110,11 @@ The Virtuoso server configuration is kept in a file <code>virtuoso.ini</code>. I
 	[Parameters]
 	DirsAllowed                     = ., /home/ubuntu/progs/virtuoso-opensource-bin/share/virtuoso/vad, /mnt/drive1/dataset/bsbm/100M, /mnt/drive1/dataset/sp2b/100M
 	ThreadThreshold                 = 100
-	MaxQueryMem                     = 4G
+	MaxQueryMem                     = 2G
 	
-	;; System with 28 GB free
-	NumberOfBuffers                 = 2380000
-	MaxDirtyBuffers                 = 1820000
+	;; System with 7 GB free
+	NumberOfBuffers                 = 595000
+	MaxDirtyBuffers                 = 455000
 	
 	[Striping]
 	Segment1                        = 30g, /mnt/drive1/virtuoso/db-seg1.db, /mnt/drive2/virtuoso/db-seg1.db
@@ -134,9 +135,10 @@ And creates a SPARQL endpoint at:
 	http://<host>:8890/sparql
 
 
-4) Fuseki setup, config & run
------------------------------
+4) Fuseki with TDB backend setup, config & run
+----------------------------------------------
 
+This describes the (standard) Fuseki-Jena-TDB setup, which can be downloaded at the Apache Jena Releases [download page](http://jena.apache.org/download/index.cgi) as jena-fuseki-&lt;version&gt;-distribution.tar.gz.
 We used Fuseki 1.0.1. Everything works pretty well out of the box. We just created scripts to start the server with the right parameters.
 
 ### Running the server
@@ -148,4 +150,19 @@ This starts a SPARQL endpoint at
 
 	http://<host>:3030/<dataset>/sparql
 
+4) Fuseki with HDT backend setup, config & run
+----------------------------------------------
 
+Fuseki Also works with [HDT](http://www.rdfhdt.org) as backend. We followed [these instructions](http://www.rdfhdt.org/manual-of-hdt-integration-with-jena/).
+It comes down to setting the right jars on the classpath, and referring to HDT files in the configuration.
+
+### Running the server
+To run the server, <code>cd</code> to <code>~/progs/jena-fuseki-1.0.1</code>, and run
+
+	./fuseki-server-hdt.sh
+
+This starts a SPARQL endpoint at
+
+	http://<host>:3030/ds/sparql
+
+Switching data sets is done by putting the corresponding HDT file in the directory <code>/mnt/drive1/hdt/</code>.
