@@ -59,14 +59,19 @@ If you plan to run Virtuoso with our pre-loaded database, run:
 
 This script gets the compressed database files (<code>virtuoso_drive1.tar.xz</code> and <code>virtuoso_drive2.tar.xz</code>) from S3 storage and unpacks them in <code>/mnt/drive1/virtuoso</code> and <code>/mnt/drive2/virtuoso</code> respectively. This can take a few minutes since each file is about 15 GB. Also, do this before starting the Virtuoso server (of course).
 
-### Preparing Fuseki database files
+### Preparing Fuseki TDB database files
 
-If you plan to run Fuseki with our pre-loaded database, run:
+If you plan to run Fuseki with our pre-loaded TDB database, run:
 
 	./3_prepareFusekiFiles_<dataset>.sh
 
 This script gets the compressed database files (<code>fuseki-bsbm.tar.xz</code> or <code>fuseki-sp2b.tar.xz</code>) from S3 storage and unpacks them in <code>/mnt/drive2/dataset/bsbm/100M/fuseki-bsbm</code> or <code>/mnt/drive1/dataset/sp2b/100M/fuseki-sp2b</code> respectively. Do this before starting Fuseki (of course).
 
+### Preparing HDT files
+
+If you plan to run Fuseki or an LDF server with our HDT files, run:
+
+	./4_prepareHDTFiles_<dataset>.sh
 
 3) Virtuoso setup, config & run
 -------------------------------
@@ -146,9 +151,14 @@ To run the server, <code>cd</code> to <code>~/progs/jena-fuseki-1.0.1</code>, an
 
 	./fuseki-server-<dataset>.sh
 
-This starts a SPARQL endpoint at
+This starts Fuseki as a foreground process. In fact, it does this:
+
+	./fuseki-server --loc=/mnt/drive2/dataset/bsbm/100M/fuseki-bsbm /bsbm
+
+And starts a SPARQL endpoint at
 
 	http://<host>:3030/<dataset>/sparql
+
 
 4) Fuseki with HDT backend setup, config & run
 ----------------------------------------------
@@ -156,12 +166,43 @@ This starts a SPARQL endpoint at
 Fuseki Also works with [HDT](http://www.rdfhdt.org) as backend. We followed [these instructions](http://www.rdfhdt.org/manual-of-hdt-integration-with-jena/).
 It comes down to setting the right jars on the classpath, and referring to HDT files in the configuration.
 
+### Configuration
+
+Here are the modified lines in config.ttl:
+
+	[] rdf:type fuseki:Server ;
+		ja:context [ ja:cxtName "arq:queryTimeout" ;  ja:cxtValue "60000,180000" ] ;
+		ja:loadClass "org.rdfhdt.hdtjena.HDTGraphAssembler" ;
+		fuseki:services (
+			<#service1>
+		) .
+
+	<#service1> rdf:type fuseki:Service ;
+		# SPARQL query services e.g. http://host:port/ds/sparql?query=...
+		fuseki:serviceQuery             "sparql" ;
+		fuseki:name                     "ds" ;
+		fuseki:serviceQuery             "query" ;
+		fuseki:serviceReadGraphStore    "get" ;
+		fuseki:dataset                   <#dataset> .
+
+	<#dataset> rdf:type ja:RDFDataset ;
+		rdfs:label "ds" ;
+		ja:defaultGraph <#graph1> .
+
+	<#graph1> rdfs:label "RDF Graph1 from HDT file" ;
+		rdf:type hdt:HDTGraph ;
+		hdt:fileName "/mnt/drive1/hdt/dataset.hdt" .
+
 ### Running the server
 To run the server, <code>cd</code> to <code>~/progs/jena-fuseki-1.0.1</code>, and run
 
 	./fuseki-server-hdt.sh
 
-This starts a SPARQL endpoint at
+This starts Fuseki as a foreground process. In fact, it does this:
+
+	./fuseki-server --config=config.ttl
+
+And creates a SPARQL endpoint at
 
 	http://<host>:3030/ds/sparql
 
