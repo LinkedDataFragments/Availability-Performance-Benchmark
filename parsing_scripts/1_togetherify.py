@@ -14,7 +14,7 @@ for root, dirnames, filenames in os.walk(rootdir):
       tpath = glob.glob(rootdir + '/' + parts[0] + '/' + parts[1] + '/*/timing.txt')
       with open(tpath[0], 'r') as timingfile:
           content = timingfile.read()
-          m = re.search('---Starting benchmark[\s\S]*(\d{13})[\s\S]*---Stopping benchmark[\s\S]*(\d{13})[\s\S]*?$', content)
+          m = re.search('---Starting benchmark[\s\S]*?(\d{13})[\s\S]*?---Stopping benchmark[\s\S]*?(\d{13})[\s\S]*?$', content)
           timing1 = int(m.group(1))
           timing2 = int(m.group(2))
       with open (path, 'r') as benchfile:
